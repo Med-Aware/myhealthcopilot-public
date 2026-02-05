@@ -72,15 +72,28 @@
             color: var(--primary);
         }
 
-        .contact-card a {
-            color: var(--primary);
-            text-decoration: none;
-            font-size: 1.1rem;
-            font-weight: 500;
+        .contact-card .store-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
         }
 
-        .contact-card a:hover {
-            text-decoration: underline;
+        .store-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .store-link:hover {
+            opacity: 0.9;
         }
 
         .contact-card p {
@@ -106,6 +119,18 @@
 
         .faq-answer {
             color: var(--text-light);
+        }
+
+        .warning-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning-box strong {
+            color: #92400e;
         }
 
         a {
@@ -136,6 +161,14 @@
             .contact-card {
                 background: #1f2937;
             }
+
+            .warning-box {
+                background: #451a03;
+            }
+
+            .warning-box strong {
+                color: #fcd34d;
+            }
         }
     </style>
 </head>
@@ -144,9 +177,16 @@
     <p class="subtitle">We're here to help you get the most out of myHealthCopilot</p>
 
     <div class="contact-card">
-        <h3>Email Support</h3>
-        <a href="mailto:jeremy@med-aware.com">jeremy@med-aware.com</a>
-        <p>We typically respond within 24-48 hours</p>
+        <h3>Contact Support</h3>
+        <p>For questions, feedback, or to report issues, please contact us through the app store:</p>
+        <div class="store-links">
+            <a href="https://apps.apple.com/app/myhealthcopilot" class="store-link">
+                App Store (iOS)
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.medaware.healthcopilot" class="store-link">
+                Google Play (Android)
+            </a>
+        </div>
     </div>
 
     <h2>Frequently Asked Questions</h2>
@@ -208,9 +248,9 @@
     <div class="faq-item">
         <p class="faq-question">I found a bug. How do I report it?</p>
         <p class="faq-answer">
-            Please email us at <a href="mailto:jeremy@med-aware.com">jeremy@med-aware.com</a>
-            with a description of the issue, your device model, and iOS/Android version.
-            Screenshots are helpful if applicable (but please don't include any personal health information).
+            Please contact us through the App Store or Google Play Store with a description
+            of the issue, your device model, and iOS/Android version. Screenshots are helpful
+            if applicable.
         </p>
     </div>
 
@@ -219,17 +259,21 @@
     <ul>
         <li>Your device model (e.g., iPhone 15 Pro, Pixel 8)</li>
         <li>Operating system version (e.g., iOS 18.1, Android 15)</li>
-        <li>App version (found in Settings)</li>
+        <li>App version (found in Settings > App Information)</li>
         <li>A clear description of the issue or question</li>
     </ul>
-    <p>
+
+    <div class="warning-box">
         <strong>Important:</strong> Please do not include any personal health information,
-        medication names, or other sensitive details in your support emails unless absolutely
+        medication names, or other sensitive details in your support messages unless absolutely
         necessary for troubleshooting.
-    </p>
+    </div>
 
     <footer>
-        <p><a href="privacy.html">Privacy Policy</a></p>
+        <p>
+            <a href="privacy-policy.html">Privacy Policy</a> |
+            <a href="terms-of-service.html">Terms of Service</a>
+        </p>
         <p>&copy; 2025 Med-Aware. All rights reserved.</p>
     </footer>
 </body>

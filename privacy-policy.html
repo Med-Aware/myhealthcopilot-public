@@ -48,6 +48,13 @@
             color: var(--text);
         }
 
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
         p, li {
             margin-bottom: 0.75rem;
         }
@@ -67,6 +74,24 @@
 
         .highlight-box strong {
             color: var(--primary);
+        }
+
+        .commitment-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .commitment-list li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .commitment-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
         }
 
         table {
@@ -90,6 +115,25 @@
             color: var(--primary);
         }
 
+        .toc {
+            background: #f9fafb;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .toc ul {
+            margin-bottom: 0;
+        }
+
+        .toc a {
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             margin-top: 3rem;
             padding-top: 1.5rem;
@@ -111,7 +155,7 @@
                 background: #1e3a5f;
             }
 
-            th {
+            th, .toc {
                 background: #1f2937;
             }
         }
@@ -121,157 +165,278 @@
     <h1>Privacy Policy</h1>
     <p class="effective-date">Effective Date: January 2025</p>
 
-    <div class="highlight-box">
-        <strong>Our Commitment:</strong> myHealthCopilot is designed with privacy as a core principle.
-        Your health data stays on your device and is never uploaded to our servers or any third-party cloud services.
+    <p>
+        My Health Copilot ("we," "our," or "the App") is committed to protecting your privacy and securing
+        your Protected Health Information (PHI). This Privacy Policy explains how we collect, use, store,
+        and protect your health information in compliance with the Health Insurance Portability and
+        Accountability Act (HIPAA) and other applicable privacy laws.
+    </p>
+
+    <div class="toc">
+        <strong>Table of Contents</strong>
+        <ul>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#information-collected">2. Information We Collect</a></li>
+            <li><a href="#how-we-use">3. How We Use Your Information</a></li>
+            <li><a href="#hipaa">4. HIPAA Compliance</a></li>
+            <li><a href="#security">5. Data Security and Encryption</a></li>
+            <li><a href="#storage">6. Data Storage and Retention</a></li>
+            <li><a href="#your-rights">7. Your Privacy Rights</a></li>
+            <li><a href="#third-party">8. Third-Party Services</a></li>
+            <li><a href="#children">9. Children's Privacy</a></li>
+            <li><a href="#changes">10. Changes to This Policy</a></li>
+            <li><a href="#contact">11. Contact Us</a></li>
+        </ul>
     </div>
 
-    <h2>1. Overview</h2>
+    <h2 id="introduction">1. Introduction</h2>
     <p>
-        myHealthCopilot ("the App") is a personal health management application that helps you
-        track healthcare appointments, medications, and health conditions. This privacy policy
-        explains how we handle your information.
+        My Health Copilot is designed as a personal health management tool that keeps your medical
+        information private and secure. We believe that <strong>your health data belongs to you</strong>
+        and should remain under your complete control.
     </p>
 
-    <h2>2. Data Storage: On-Device Only</h2>
-    <p>
-        <strong>All your health data is stored exclusively on your device.</strong> We do not operate
-        servers that collect, store, or process your personal health information.
-    </p>
+    <div class="highlight-box">
+        <strong>Our Privacy Commitments:</strong>
+        <ul class="commitment-list">
+            <li><strong>No Cloud Storage:</strong> Your health data never leaves your device</li>
+            <li><strong>No Third-Party Sharing:</strong> We never sell, rent, or share your health information</li>
+            <li><strong>No Advertising:</strong> We do not use your data for advertising purposes</li>
+            <li><strong>No Tracking:</strong> We do not track your behavior or location</li>
+            <li><strong>Offline-First:</strong> The app works completely offline to ensure maximum privacy</li>
+        </ul>
+    </div>
+
+    <h2 id="information-collected">2. Information We Collect</h2>
+
+    <h3>Protected Health Information (PHI)</h3>
+    <p>As you use the app, you may enter the following health information:</p>
+
+    <p><strong>Medical Visit Data:</strong></p>
     <ul>
-        <li><strong>Local Database:</strong> Your data is stored in an encrypted SQLCipher database on your device</li>
-        <li><strong>Audio Recordings:</strong> Visit recordings are processed and stored locally</li>
-        <li><strong>Transcriptions:</strong> Generated using on-device AI (Whisper) and encrypted at rest</li>
-        <li><strong>Insurance Cards:</strong> Images are stored in encrypted local storage</li>
+        <li>Audio recordings of doctor appointments</li>
+        <li>Transcriptions of medical conversations</li>
+        <li>AI-generated visit summaries</li>
+        <li>Appointment dates, times, and locations</li>
+        <li>Doctor names and contact information</li>
     </ul>
 
-    <h2>3. Information We Collect</h2>
-    <p>The App allows you to store the following types of information locally on your device:</p>
-
-    <table>
-        <tr>
-            <th>Data Type</th>
-            <th>Purpose</th>
-            <th>Storage</th>
-        </tr>
-        <tr>
-            <td>Appointment details</td>
-            <td>Track healthcare visits</td>
-            <td>Encrypted on device</td>
-        </tr>
-        <tr>
-            <td>Audio recordings</td>
-            <td>Record and transcribe visits</td>
-            <td>Encrypted on device</td>
-        </tr>
-        <tr>
-            <td>Medications</td>
-            <td>Manage prescriptions and dosages</td>
-            <td>Encrypted on device</td>
-        </tr>
-        <tr>
-            <td>Health conditions</td>
-            <td>Track ongoing health topics</td>
-            <td>Encrypted on device</td>
-        </tr>
-        <tr>
-            <td>Insurance card photos</td>
-            <td>Quick reference to coverage</td>
-            <td>Encrypted on device</td>
-        </tr>
-        <tr>
-            <td>Location (optional)</td>
-            <td>Find nearby healthcare providers</td>
-            <td>Not stored; used only in real-time</td>
-        </tr>
-    </table>
-
-    <h2>4. On-Device AI Processing</h2>
-    <p>
-        The App uses on-device artificial intelligence for several features. This processing
-        happens entirely on your device:
-    </p>
+    <p><strong>Medication Information:</strong></p>
     <ul>
-        <li><strong>Speech-to-Text:</strong> Audio recordings are transcribed using on-device Whisper AI with Core ML acceleration</li>
-        <li><strong>Visit Summaries:</strong> Transcriptions are summarized using Apple Intelligence (iOS) or Google Gemini Nano (Android)</li>
-        <li><strong>OCR Scanning:</strong> Text recognition for pill bottles and appointment slips uses on-device processing</li>
-    </ul>
-    <p>
-        <strong>No audio, transcriptions, or health summaries are sent to external servers.</strong>
-    </p>
-
-    <h2>5. Optional Cloud Features</h2>
-    <p>
-        The App may optionally use cloud AI services for enhanced medication information
-        (such as descriptions of common medications). If enabled:
-    </p>
-    <ul>
-        <li>Only generic medication names are sent (e.g., "sertraline"), not your personal health data</li>
-        <li>No personally identifiable information is transmitted</li>
-        <li>You can disable this feature to use fully offline operation</li>
+        <li>Prescription names and dosages</li>
+        <li>Medication schedules and reminders</li>
+        <li>Photos of pill bottles or medication packaging</li>
+        <li>Side effects and notes</li>
     </ul>
 
-    <h2>6. Third-Party Services</h2>
-    <p>The App integrates with the following platform services:</p>
+    <p><strong>Health Measurements:</strong></p>
     <ul>
-        <li><strong>Apple HealthKit (iOS):</strong> If you grant permission, the App can read health data from HealthKit. This data is processed locally and never leaves your device.</li>
-        <li><strong>Maps:</strong> When you tap on an address, it opens in your preferred maps application. The address is sent to the maps provider.</li>
+        <li>Vital signs (blood pressure, heart rate, temperature, weight, etc.)</li>
+        <li>Laboratory test results</li>
+        <li>Medical imaging reports</li>
+        <li>Health trends and history</li>
     </ul>
 
-    <h2>7. Data Security</h2>
-    <p>We implement multiple layers of security to protect your data:</p>
+    <h3>Device and Usage Information</h3>
+    <p>We may collect limited technical information to improve app functionality:</p>
     <ul>
-        <li><strong>Encryption:</strong> All sensitive data is encrypted using SQLCipher (AES-256)</li>
-        <li><strong>Biometric Protection:</strong> Optional Face ID, Touch ID, or device passcode required to access the App</li>
-        <li><strong>Secure Storage:</strong> Encryption keys are stored in the device's secure enclave</li>
-        <li><strong>No Transmission:</strong> Health data never leaves your device</li>
+        <li><strong>Device Type:</strong> iOS or Android device model</li>
+        <li><strong>Operating System Version:</strong> To ensure compatibility</li>
+        <li><strong>App Version:</strong> To provide appropriate support</li>
+        <li><strong>Error Logs:</strong> To diagnose and fix technical issues (no health data included)</li>
+    </ul>
+    <p><strong>Important:</strong> Usage data is stored locally on your device and is never transmitted to our servers.</p>
+
+    <h2 id="how-we-use">3. How We Use Your Information</h2>
+
+    <h3>Primary Uses</h3>
+    <p>Your health information is used exclusively for:</p>
+    <ul>
+        <li>Display your health records and appointment history</li>
+        <li>Generate AI summaries of medical visits</li>
+        <li>Provide medication reminders and health tracking</li>
+        <li>Calculate health trends and visualizations</li>
     </ul>
 
-    <h2>8. Data Retention and Deletion</h2>
-    <p>
-        Your data remains on your device until you delete it. You have full control:
-    </p>
+    <h3>What We DON'T Do With Your Data</h3>
     <ul>
-        <li>Delete individual records at any time within the App</li>
-        <li>Delete all App data by uninstalling the App</li>
-        <li>Export your data before deletion if desired</li>
-    </ul>
-    <p>
-        Since we do not store your data on any servers, there is nothing to delete on our end.
-    </p>
-
-    <h2>9. Children's Privacy</h2>
-    <p>
-        The App is not intended for use by children under 13 years of age. We do not knowingly
-        collect information from children under 13.
-    </p>
-
-    <h2>10. Your Rights</h2>
-    <p>Because your data is stored locally on your device, you have complete control over it:</p>
-    <ul>
-        <li><strong>Access:</strong> View all your data within the App</li>
-        <li><strong>Export:</strong> Export your data in standard formats</li>
-        <li><strong>Delete:</strong> Remove any or all data at any time</li>
-        <li><strong>Portability:</strong> Your data is yours; it never leaves your device without your action</li>
+        <li><strong>Never sell your information</strong> to third parties</li>
+        <li><strong>Never share with advertisers</strong> or marketing companies</li>
+        <li><strong>Never use for research</strong> without your explicit consent</li>
+        <li><strong>Never upload to cloud servers</strong></li>
+        <li><strong>Never share with insurance companies</strong> or employers</li>
     </ul>
 
-    <h2>11. Changes to This Policy</h2>
+    <h2 id="hipaa">4. HIPAA Compliance</h2>
     <p>
-        We may update this privacy policy from time to time. We will notify you of any changes
-        by posting the new policy in the App and updating the effective date above.
+        My Health Copilot is designed to meet the security and privacy standards required by the
+        Health Insurance Portability and Accountability Act (HIPAA).
     </p>
 
-    <h2>12. Contact Us</h2>
+    <h3>Technical Safeguards</h3>
+    <ul>
+        <li>AES-256 encryption for all data at rest</li>
+        <li>Secure password hashing (Argon2 algorithm)</li>
+        <li>Biometric authentication (Face ID, Touch ID, fingerprint)</li>
+        <li>Automatic session timeouts</li>
+        <li>Access controls and audit logging</li>
+    </ul>
+
+    <h3>Your HIPAA Rights</h3>
+    <p>Under HIPAA, you have the right to:</p>
+    <ul>
+        <li><strong>Access:</strong> View and export your health information at any time</li>
+        <li><strong>Amend:</strong> Correct inaccurate or incomplete information</li>
+        <li><strong>Restrict:</strong> Limit how your information is used</li>
+        <li><strong>Breach Notification:</strong> Be notified if your information is compromised</li>
+    </ul>
+
+    <h2 id="security">5. Data Security and Encryption</h2>
+
+    <h3>Encryption Standards</h3>
+    <p>All your health data is protected using <strong>military-grade encryption</strong>:</p>
+    <ul>
+        <li><strong>AES-256-bit encryption:</strong> Encrypts all data stored in the app's database</li>
+        <li><strong>SQLCipher:</strong> Encrypted SQLite database for maximum security</li>
+        <li><strong>Hardware-backed key storage:</strong> Encryption keys stored in iOS Keychain or Android Keystore</li>
+        <li><strong>No cloud backup:</strong> Data excluded from iCloud and Google Drive backups</li>
+    </ul>
+
+    <h3>Authentication Security</h3>
+    <ul>
+        <li><strong>Argon2id hashing:</strong> Industry-leading password hashing algorithm</li>
+        <li><strong>Biometric Authentication:</strong> Face ID, Touch ID, or fingerprint via secure enclave</li>
+        <li><strong>Local only:</strong> Biometric data never leaves your device</li>
+    </ul>
+
+    <h2 id="storage">6. Data Storage and Retention</h2>
+
+    <h3>Where Your Data is Stored</h3>
+    <p><strong>Local Device Storage:</strong></p>
+    <ul>
+        <li>All health data is stored exclusively on your device</li>
+        <li>Located in the app's secure, sandboxed directory</li>
+        <li>Encrypted with AES-256 encryption</li>
+        <li>Isolated from other apps and processes</li>
+    </ul>
+
+    <p><strong>No Cloud Storage:</strong></p>
+    <ul>
+        <li>Data is NOT uploaded to our servers</li>
+        <li>Data is NOT backed up to iCloud or Google Drive</li>
+        <li>Data is NOT synchronized across devices</li>
+    </ul>
+
+    <h3>Data Retention Policy</h3>
+    <ul>
+        <li>Your health information is retained indefinitely while you use the app</li>
+        <li>When you delete information, it is immediately and permanently erased</li>
+        <li>If you delete your account, all data is permanently erased within 24 hours</li>
+    </ul>
+
+    <h2 id="your-rights">7. Your Privacy Rights</h2>
+    <p>You have complete control over your health information:</p>
+    <ul>
+        <li><strong>Right to Access:</strong> View all your stored health information at any time</li>
+        <li><strong>Right to Modify:</strong> Edit or correct any information in the app</li>
+        <li><strong>Right to Delete:</strong> Delete individual records or all data with account deletion</li>
+        <li><strong>Right to Export:</strong> Export complete health records in PDF, text, or spreadsheet formats</li>
+    </ul>
+
+    <h3>Opt-Out Rights</h3>
+    <p>Optional features that can be disabled:</p>
+    <ul>
+        <li>AI-powered medication descriptions</li>
+        <li>Cloud-based AI features</li>
+        <li>Analytics and error reporting</li>
+        <li>Push notifications</li>
+    </ul>
+
+    <h2 id="third-party">8. Third-Party Services</h2>
+
+    <h3>Google AI Studio (Optional)</h3>
+    <p>When you use AI-powered medication descriptions:</p>
+    <ul>
+        <li><strong>What is Sent:</strong> Medication name and dosage only</li>
+        <li><strong>Not Sent:</strong> No patient name or identifying information</li>
+        <li><strong>Your Control:</strong> This feature can be completely disabled</li>
+    </ul>
+
+    <h3>Platform Services</h3>
+    <ul>
+        <li><strong>Apple HealthKit (iOS):</strong> If you grant permission, data is processed locally and never leaves your device</li>
+        <li><strong>Maps:</strong> When you tap on an address, it opens in your preferred maps application</li>
+    </ul>
+
+    <h3>No Other Third Parties</h3>
+    <ul>
+        <li>No advertising networks</li>
+        <li>No social media integrations</li>
+        <li>No marketing platforms</li>
+        <li>No data brokers</li>
+    </ul>
+
+    <h2 id="children">9. Children's Privacy</h2>
     <p>
-        If you have questions about this privacy policy or our privacy practices, please contact us at:
+        My Health Copilot is intended for users aged 13 and older. We do not knowingly collect
+        personal information from children under 13.
+    </p>
+
+    <h2 id="changes">10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+    <ul>
+        <li><strong>Major Changes:</strong> In-app notification with summary of changes and 30-day notice</li>
+        <li><strong>Minor Changes:</strong> Update on this page with new effective date</li>
+    </ul>
+
+    <h2 id="contact">11. Contact Us</h2>
+    <p>
+        If you have questions about this Privacy Policy or our privacy practices, please contact us
+        through the <strong>App Store</strong> (iOS) or <strong>Google Play Store</strong> (Android)
+        listing for My Health Copilot.
     </p>
     <p>
-        <strong>Email:</strong> <a href="mailto:jeremy@med-aware.com">jeremy@med-aware.com</a>
+        Since all your data is stored locally on your device, you can exercise your privacy rights directly
+        within the app—no request to us is needed.
     </p>
+
+    <h2>State-Specific Privacy Rights</h2>
+
+    <h3>California Residents (CCPA/CPRA)</h3>
+    <p>If you are a California resident, you have additional rights:</p>
+    <ul>
+        <li><strong>Right to Know:</strong> What personal information we collect and how it's used</li>
+        <li><strong>Right to Delete:</strong> Request deletion of your personal information</li>
+        <li><strong>Right to Opt-Out:</strong> Opt-out of sale of personal information (we don't sell data)</li>
+        <li><strong>Right to Non-Discrimination:</strong> Equal service regardless of privacy choices</li>
+    </ul>
+
+    <h3>European Residents (GDPR)</h3>
+    <p>If you are in the European Economic Area, you have rights under GDPR:</p>
+    <ul>
+        <li>Right to Access, Rectification, and Erasure</li>
+        <li>Right to Restrict Processing</li>
+        <li>Right to Data Portability</li>
+        <li>Right to Object</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>Our Commitment:</strong> Your health, your data, your control.
+        <ul class="commitment-list">
+            <li>Your data stays on your device</li>
+            <li>Bank-level encryption protects everything</li>
+            <li>No cloud storage or third-party sharing</li>
+            <li>HIPAA-compliant security</li>
+        </ul>
+    </div>
 
     <footer>
         <p>&copy; 2025 Med-Aware. All rights reserved.</p>
-        <p>myHealthCopilot is designed to help you manage your health information. It is not a substitute for professional medical advice.</p>
+        <p>
+            <a href="terms-of-service.html">Terms of Service</a> |
+            <a href="support.html">Support</a>
+        </p>
+        <p>Last Updated: January 2025 | Version 1.0</p>
     </footer>
 </body>
 </html>
